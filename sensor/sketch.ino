@@ -1,7 +1,8 @@
-/************************************************************************************
- * The sketch is in part based on Edoardo Viola's (@edovio) TemperatureMonitor_v2_1 *
- * This code is under Creative Commons - Attribution 4.0 International (CC BY 4.0)  *
- * **********************************************************************************/
+/*************************************************************************************
+ * The sketch is in part based on Edoardo Viola's (@edovio) TemperatureMonitor_v2_1: *
+ * pin definitions, setup and connecting to WiFi                                     *
+ * This code is under Creative Commons - Attribution 4.0 International (CC BY 4.0)   *
+ * ***********************************************************************************/
 
 //Library for the DHT11 sensor
 #include "DHTesp.h"
