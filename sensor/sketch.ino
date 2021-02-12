@@ -4,8 +4,6 @@
  * **********************************************************************************/
 
 //Library for the DHT11 sensor
-//#include <Adafruit_Sensor.h>
-// #include "DHT.h"
 #include "DHTesp.h"
 DHTesp dht;
 
@@ -31,7 +29,6 @@ DHTesp dht;
 #define DHTPIN D3
 
 //Temperature Sensor Inizialization
-// int samplingPeriod = 2000;
 int samplingPeriod = 1000 * 60 * 5;
 
 double lastHumidityValue = 0;
@@ -47,14 +44,14 @@ const int ledPin = LED_BUILTIN;
 const int ledPin = 13; // manually configure LED pin
 #endif
 
-//Your wifi credentials here (and keep it private)
+//Your wifi credentials here
 const char* ssid = "YOUR_WIFI_SSID";
 const char* password = "YOUR_WIFI_PASSWORD";
 
 WebThingAdapter *adapter;
 
 const char* deviceTypes[] = {"MultiLevelSensor", "Sensor", nullptr};
-// Sets up the device info. First two values are free-form.
+// Sets up the device info, first two parameters are free-form strings
 ThingDevice temp("DHT11-1", "DHT11 Sensor", deviceTypes);
 
 ThingProperty temperature("temperature", "Input pin", NUMBER, "TemperatureProperty");
@@ -63,7 +60,7 @@ ThingProperty humidity("humidity", "Input pin", NUMBER, "HumidityProperty");
 bool lastOn = false;
 
 void setup(void){
-  dht.setup(DHTPIN, DHTesp::DHT11);
+  dht.setup(DHTPIN, DHTesp::DHT11); // Change second parameter to DHTesp::DHT22 for DHT22 support
   pinMode(ledPin,OUTPUT);
   Serial.begin(115200);
   Serial.println("");
