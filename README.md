@@ -7,4 +7,4 @@ Read more about the project here.
 
 ### Wiring diagram
 
-[Wiring diagram, showing DHT11 setup](sensor/wiringDiagram.png)
+![Wiring diagram, showing DHT11 setup](sensor/wiringDiagram.png)
